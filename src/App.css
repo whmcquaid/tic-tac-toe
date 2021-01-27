@@ -1,19 +1,20 @@
 body {
   background: black;
   color: lightgreen;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
 }
 .square {
   background-color: darkslategrey;
   border: 5px rgb(250, 60, 60) double;
-  font-size: 70px;
+  font-size: 7.5rem;
   float: left;
   font-weight: bold;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
+  vertical-align: middle;
   width: 150px;
   height: 150px;
   border-radius: 5px;
@@ -41,7 +42,15 @@ ul {
   margin-bottom: 10px;
 }
 h1 {
-  color: lightyellow;
+  color: yellow;
   font-size: 2.5rem;
   text-align: center;
+}
+.history-button {
+  font-size: 1.2rem;
+  background: hotpink;
+  color: darkblue;
+}
+.history-list {
+  list-style: none;
 }

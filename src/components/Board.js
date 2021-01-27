@@ -1,12 +1,12 @@
 import React from 'react'
 import Square from './Square'
 
-export default function Board(props) {
+export default function Board({squares, onClick}) {
     const renderSquare = (i) => {
         return (
         <Square 
-        value={props.squares[i]} 
-        onClick={() => props.onClick(i)}>
+        value={squares[i]} 
+        onClick={() => onClick(i)}>
         </Square>
         )
     }
