@@ -40,7 +40,7 @@ render () {
     const moves = history.map((step, move) => {
         const desc = move ? 'Go to move #' + move : 'Start the Game';
         return (
-            <li className='history-list' key={move}>
+            <li className='history-lis' key={move}>
                 <button className='history-button' onClick={() => {this.jumpTo(move)}}>{desc}</button>
             </li>
         )
