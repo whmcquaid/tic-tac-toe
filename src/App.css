@@ -32,11 +32,8 @@ body {
   display: flex;
   margin: 0 auto;
 }
-ul {
-  padding-left: 30px;
-}
+
 .game-info {
-  margin-left: 20px;
   min-width: 250px;
   margin-top: -6%;
 }
@@ -64,8 +61,7 @@ ul {
   flex-direction: row;
 }
 .board-container {
-  padding-top: -25%;
-  margin-right: 25px;
+  padding-top: 15%;
 }
 @media screen and (max-width: 778px) {
   .square {
@@ -76,7 +72,7 @@ ul {
   }
   .board-container {
     min-width: 170px;
-    padding-top: -15%;
+    padding-top: 15%;
   }
   .row {
     flex-wrap: none;
@@ -95,7 +91,6 @@ ul {
     display: inline-flex;
     flex-direction: column;
     min-width: 170px;
-    padding-left: 10%;
     padding-top: -17%;
     font-size: 1.3rem;
     font-weight: bold;

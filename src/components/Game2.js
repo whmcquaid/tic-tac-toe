@@ -28,6 +28,9 @@ const Game2 = () => {
     setXIsNext(step % 2 === 0);
     setBoard(moveHistory[step].squares);
     setMoveHistory(moveHistory.slice(0, step + 1));
+    if (moveHistory.length === 1) {
+      setGameStatus(null) 
+    }
   };
   const handleClick = (i) => {
     // TODO: make copy of the board
