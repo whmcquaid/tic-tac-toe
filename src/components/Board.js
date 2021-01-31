@@ -11,7 +11,7 @@ export default function Board({squares, onClick}) {
         )
     }
     return (
-        <div>
+        <div className='board-container'>
             <div className='row'>
                 {renderSquare(0)}
                 {renderSquare(1)}

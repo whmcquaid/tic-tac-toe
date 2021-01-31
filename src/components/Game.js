@@ -38,9 +38,9 @@ render () {
     const current = history[history.length - 1];
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
-        const desc = move ? 'Go to move #' + move : 'Start the Game';
+        const desc = move ? 'Go to move #' + move : this.state.history.length > 1 ? 'Restart' : 'Start the Game';
         return (
-            <li className='history-lis' key={move}>
+            <li className='history-list' key={move}>
                 <button className='history-button' onClick={() => {this.jumpTo(move)}}>{desc}</button>
             </li>
         )
@@ -59,8 +59,6 @@ render () {
     )
 }
 }
-
-
     
 const calculateWinner = (squares) => {
    const winnerLines = [

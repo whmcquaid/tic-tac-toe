@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background-color: darkblue;
   color: lightgreen;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 35px;
@@ -37,11 +37,16 @@ ul {
 }
 .game-info {
   margin-left: 20px;
+  min-width: 250px;
+  margin-top: -6%;
 }
 .status {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
-h1 {
+.title-h1 {
   color: yellow;
   font-size: 2.5rem;
   text-align: center;
@@ -53,4 +58,46 @@ h1 {
 }
 .history-list {
   list-style: none;
+}
+.row {
+  display: inline-flex;
+  flex-direction: row;
+}
+.board-container {
+  padding-top: -25%;
+  margin-right: 25px;
+}
+@media screen and (max-width: 778px) {
+  .square {
+    height: 50px;
+    width: 50px;
+    font-size: 2.2rem;
+    border: 2px rgb(250, 60, 60) double;
+  }
+  .board-container {
+    min-width: 170px;
+    padding-top: -15%;
+  }
+  .row {
+    flex-wrap: none;
+  }
+  .history-button {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .title-h1 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 20px;
+  }
+  .game-info {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 170px;
+    padding-left: 10%;
+    padding-top: -17%;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 }
