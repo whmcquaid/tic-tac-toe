@@ -25,10 +25,12 @@ const Game2 = () => {
     return null;
   };
   const jumpTo = (step) => {
+    console.log(step)
     setXIsNext(step % 2 === 0);
     setBoard(moveHistory[step].squares);
     setMoveHistory(moveHistory.slice(0, step + 1));
-    if (moveHistory.length === 1) {
+    console.log({moveHistory})
+    if (gameStatus) {
       setGameStatus(null) 
     }
   };
@@ -57,29 +59,29 @@ const Game2 = () => {
     setXIsNext(!xIsNext);
   };
   const moves = moveHistory.map((step, move) => {
-    const desc = move ? "Go to #" + move : (moveHistory.length > 1) ? "Restart" : "Start the Game";
     return (
       <li className='history-list' key={move}>
         <button className='history-button' 
           onClick={() => {
-            jumpTo(move);
+            jumpTo(move)
+
           }}
         >
-          {desc}
+          {move ? "Go to #" + move : (moveHistory.length > 1) ? "Restart" : "Start the Game"}
         </button>
       </li>
     );
   });
-  let status = gameStatus
-    ? "Winner is " + gameStatus
-    : "Next Player is " + (xIsNext ? "X" : "O");
+console.log({gameStatus})
   return (
     <div className="game">
       <div className="game-board">
         <Board onClick={(i) => handleClick(i)} squares={board} />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div>{gameStatus
+    ? "Winner is " + gameStatus
+    : "Next Player is " + (xIsNext ? "X" : "O")}</div>
         <ul>{moves}</ul>
       </div>
     </div>
