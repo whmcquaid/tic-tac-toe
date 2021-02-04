@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Board from "./Board";
+import GetPlayerNames from './GetPlayerNames'
 const Game2 = () => {
+  const [name, setName] = useState('X')
+  const [name2, setName2] = useState('O')
   const init_board = Array(9).fill(null);
   const [board, setBoard] = useState(init_board);
   const [xIsNext, setXIsNext] = useState(true);
@@ -25,11 +28,9 @@ const Game2 = () => {
     return null;
   };
   const jumpTo = (step) => {
-    console.log(step)
     setXIsNext(step % 2 === 0);
     setBoard(moveHistory[step].squares);
     setMoveHistory(moveHistory.slice(0, step + 1));
-    console.log({moveHistory})
     if (gameStatus) {
       setGameStatus(null) 
     }
@@ -64,7 +65,6 @@ const Game2 = () => {
         <button className='history-button' 
           onClick={() => {
             jumpTo(move)
-
           }}
         >
           {move ? "Go to #" + move : (moveHistory.length > 1) ? "Restart" : "Start the Game"}
@@ -72,17 +72,22 @@ const Game2 = () => {
       </li>
     );
   });
-console.log({gameStatus})
+
   return (
     <div className="game">
       <div className="game-board">
         <Board onClick={(i) => handleClick(i)} squares={board} />
       </div>
       <div className="game-info">
+    
         <div>{gameStatus
-    ? "Winner is " + gameStatus
-    : "Next Player is " + (xIsNext ? "X" : "O")}</div>
+    ? "Winner is " + (gameStatus === "X" ? name : name2)
+    : "Next Player is " + (xIsNext ? name : name2)}</div>
         <ul>{moves}</ul>
+        <GetPlayerNames 
+        name = {name} handleChange = {event => setName(event.target.value)}
+        name2 = {name2} handleChange2 = {event => setName2(event.target.value)}
+        />
       </div>
     </div>
   );

@@ -25,6 +25,7 @@ body {
   display: table;
 }
 .game {
+  width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,15 +36,19 @@ body {
 
 .game-info {
   min-width: 250px;
-  margin-top: -6%;
+  width: 100%;
+  height: 100%;
 }
 .status {
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 .title-h1 {
+  width: 100%;
+  margin-bottom: 10px;
   color: yellow;
   font-size: 2.5rem;
   text-align: center;
@@ -61,7 +66,23 @@ body {
   flex-direction: row;
 }
 .board-container {
-  padding-top: 15%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.form-div {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  align-items: center;
+}
+.form1 {
+  margin-bottom: 15px;
+  min-width: 100%;
+}
+.form2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-width: 100%;
 }
 @media screen and (max-width: 778px) {
   .square {
