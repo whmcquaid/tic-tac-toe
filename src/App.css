@@ -1,13 +1,13 @@
 body {
   background-color: darkblue;
   color: lightgreen;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
 }
 .square {
   background-color: darkslategrey;
   border: 5px rgb(250, 60, 60) double;
-  font-size: 7.5rem;
+  font-size: 4.5rem;
   float: left;
   font-weight: bold;
   margin-right: -1px;
@@ -15,13 +15,13 @@ body {
   padding: 0;
   text-align: center;
   vertical-align: middle;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   border-radius: 5px;
 }
 .board-row:after {
   clear: both;
-  content: "";
+  content: '';
   display: table;
 }
 .game {
@@ -32,6 +32,7 @@ body {
   transform: translate(-50%, -50%);
   display: flex;
   margin: 0 auto;
+  padding-right: 15px;
 }
 
 .game-info {
@@ -84,11 +85,50 @@ body {
   margin-bottom: 15px;
   min-width: 100%;
 }
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 600px) {
+  .game-info {
+    max-width: 100px;
+  }
   .square {
-    height: 50px;
-    width: 50px;
-    font-size: 2.2rem;
+    height: 35px;
+    width: 35px;
+    font-size: 1.4rem;
+  }
+  .game {
+    max-width: 125px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .game-info {
+    max-width: 175px;
+    padding-left: 15px;
+  }
+  .board-container {
+    margin-left: 5%;
+    padding-right: 15px;
+  }
+  .game {
+    padding-right: 15px;
+    max-width: 175px;
+  }
+  .square {
+    height: 55px;
+    width: 55px;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .game-info {
+    max-width: 150px;
+  }
+  .game {
+    max-width: 150px;
+  }
+  .square {
+    height: 45px;
+    width: 45px;
+    font-size: 1.8rem;
     border: 2px rgb(250, 60, 60) double;
   }
   .board-container {
