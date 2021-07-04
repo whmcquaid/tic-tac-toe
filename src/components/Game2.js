@@ -32,7 +32,7 @@ const Game2 = () => {
     setBoard(moveHistory[step].squares);
     setMoveHistory(moveHistory.slice(0, step + 1));
     if (gameStatus) {
-      setGameStatus(null) 
+      setGameStatus(null)
     }
   };
   const handleClick = (i) => {
@@ -62,7 +62,7 @@ const Game2 = () => {
   const moves = moveHistory.map((step, move) => {
     return (
       <li className='history-list' key={move}>
-        <button className='history-button' 
+        <button className='history-button'
           onClick={() => {
             jumpTo(move)
           }}
@@ -76,18 +76,18 @@ const Game2 = () => {
   return (
     <div className="game">
       <div className="game-board">
+        <GetPlayerNames
+        name = {name} handleChange = {event => setName(event.target.value)}
+        name2 = {name2} handleChange2 = {event => setName2(event.target.value)}
+        />
         <Board onClick={(i) => handleClick(i)} squares={board} />
       </div>
       <div className="game-info">
-    
+
         <div>{gameStatus
     ? "Winner is " + (gameStatus === "X" ? name : name2)
     : "Next Player is " + (xIsNext ? name : name2)}</div>
         <ul>{moves}</ul>
-        <GetPlayerNames 
-        name = {name} handleChange = {event => setName(event.target.value)}
-        name2 = {name2} handleChange2 = {event => setName2(event.target.value)}
-        />
       </div>
     </div>
   );

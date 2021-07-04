@@ -4,15 +4,18 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
 }
+.app-container {
+  text-align: center;
+}
 .square {
   background-color: darkslategrey;
   border: 5px rgb(250, 60, 60) double;
-  font-size: 4.5rem;
+  font-size: 4.1rem;
   float: left;
   font-weight: bold;
-  margin-right: -1px;
-  margin-top: -1px;
+
   padding: 0;
+
   text-align: center;
   vertical-align: middle;
   width: 75px;
@@ -27,15 +30,17 @@ body {
 .game {
   width: 70%;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 30%;
   transform: translate(-50%, -50%);
   display: flex;
-  margin: 0 auto;
   padding-right: 15px;
+  margin-left: 18%;
+  margin-top: 7%;
 }
 
 .game-info {
+  margin-top: 120px;
   min-width: 250px;
   width: 100%;
   height: 100%;
@@ -71,6 +76,7 @@ body {
   margin-left: 10%;
 }
 .form-div {
+  margin-top: 120px;
   width: 100%;
   font-size: 1.3rem;
   font-weight: bold;
@@ -95,7 +101,11 @@ body {
     font-size: 1.4rem;
   }
   .game {
+    text-align: center;
     max-width: 125px;
+    margin: 0 auto;
+  }
+  .title-h1 {
   }
 }
 @media screen and (max-width: 1000px) {
@@ -104,17 +114,18 @@ body {
     padding-left: 15px;
   }
   .board-container {
-    margin-left: 5%;
     padding-right: 15px;
   }
   .game {
-    padding-right: 15px;
     max-width: 175px;
+    margin: 0 auto;
   }
   .square {
     height: 55px;
     width: 55px;
     font-size: 2rem;
+  }
+  .title-h1 {
   }
 }
 
@@ -124,6 +135,9 @@ body {
   }
   .game {
     max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15%;
   }
   .square {
     height: 45px;
@@ -133,7 +147,6 @@ body {
   }
   .board-container {
     min-width: 170px;
-    padding-top: 15%;
   }
   .row {
     flex-wrap: none;
@@ -152,7 +165,7 @@ body {
     display: inline-flex;
     flex-direction: column;
     min-width: 170px;
-    padding-top: -17%;
+
     font-size: 1.3rem;
     font-weight: bold;
   }
