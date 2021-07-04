@@ -119,13 +119,12 @@ body {
   .game {
     max-width: 175px;
     margin: 0 auto;
+    padding-top: 5rem;
   }
   .square {
     height: 55px;
     width: 55px;
     font-size: 2rem;
-  }
-  .title-h1 {
   }
 }
 
@@ -137,7 +136,7 @@ body {
     max-width: 150px;
     margin: 0 auto;
     text-align: center;
-    margin-top: 15%;
+    padding-top: 5rem;
   }
   .square {
     height: 45px;
